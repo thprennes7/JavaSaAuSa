@@ -35,7 +35,7 @@ function functionality3() {
     firstCardText.style.color = 'red';
   }
   edit.addEventListener('click', changeColor);
-}cardText
+}
 
 function functionality4() {
   let secondCardText = document.getElementsByClassName('card-text')[1];
@@ -59,22 +59,32 @@ function functionality5() {
       bootstrap.href = " ";
     }
     else {
-    bootstrap.href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+      bootstrap.href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+    }
   }
-}
-console.log(bootstrap);
+  console.log(bootstrap);
   navBarClick.addEventListener('dblclick', deleteCdn)
 }
 
 function functionality6() {
-  let mousePass = document.querySelectorAll(".btn-success");
-  let cardText = document.querySelectorAll(".card-text");
-  let imgCard = document.querySelectorAll(".card-img-top");
-  let reduceCard = function() {
-    cardText.remove();
-    imgCard.style.width = "20%";
+  let card = document.querySelectorAll(".col-md-4");
+  let mousePass = document.getElementsByClassName("btn-success");
+  let cardText = document.getElementsByClassName("card-text");
+  let imgCard = document.getElementsByClassName("card-img-top");
+
+  for (let i = 0; i < card.length; i++){
+    mousePass[i].addEventListener('mouseover', function(){
+      if(cardText[i].style.display == 'none'){
+      cardText[i].style.display = 'block';
+      imgCard[i].style.width = '100%';
+    } else {
+      cardText[i].style.display = 'none';
+      imgCard[i].style.width = '20%'
+
+    }
+    });
+
   }
-  cardText.addEventListener('click', reduceCard);
 }
 // functionality1();
 // functionality1Bis();
