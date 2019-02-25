@@ -55,11 +55,11 @@ function functionality5() {
   console.log(navBarClick);
   let bootstrap = document.getElementsByTagName('link')[0];
   let deleteCdn = function() {
-    if (bootstrap.href === "") {
-      bootstrap.href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+    if (bootstrap.href === 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css') {
+      bootstrap.href = " ";
     }
     else {
-    bootstrap.remove("href");
+    bootstrap.href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
   }
 }
 console.log(bootstrap);
