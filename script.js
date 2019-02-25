@@ -49,8 +49,25 @@ function functionality4() {
   }
   edit.addEventListener('click', changeColor);
 }
+
+function functionality5() {
+  let navBarClick = document.getElementsByTagName('header')[0];
+  console.log(navBarClick);
+  let bootstrap = document.getElementsByTagName('link')[0];
+  let deleteCdn = function() {
+    if (bootstrap.href === "") {
+      bootstrap.href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+    }
+    else {
+    bootstrap.remove("href");
+  }
+}
+console.log(bootstrap);
+  navBarClick.addEventListener('dblclick', deleteCdn)
+}
 // functionality1();
 // functionality1Bis();
 // functionality2();
 // functionality3();
-functionality4();
+// functionality4();
+functionality5();
