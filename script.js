@@ -35,7 +35,7 @@ function functionality3() {
     firstCardText.style.color = 'red';
   }
   edit.addEventListener('click', changeColor);
-}
+}cardText
 
 function functionality4() {
   let secondCardText = document.getElementsByClassName('card-text')[1];
@@ -65,9 +65,21 @@ function functionality5() {
 console.log(bootstrap);
   navBarClick.addEventListener('dblclick', deleteCdn)
 }
+
+function functionality6() {
+  let mousePass = document.querySelectorAll(".btn-success");
+  let cardText = document.querySelectorAll(".card-text");
+  let imgCard = document.querySelectorAll(".card-img-top");
+  let reduceCard = function() {
+    cardText.remove();
+    imgCard.style.width = "20%";
+  }
+  cardText.addEventListener('click', reduceCard);
+}
 // functionality1();
 // functionality1Bis();
 // functionality2();
 // functionality3();
 // functionality4();
-functionality5();
+// functionality5();
+functionality6();
