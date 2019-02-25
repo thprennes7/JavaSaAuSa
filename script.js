@@ -80,10 +80,8 @@ function functionality6() {
       } else {
         cardText[i].style.display = 'none';
         imgCard[i].style.width = '20%'
-
       }
     });
-
   }
 }
 
@@ -107,6 +105,26 @@ function functionality7() {
   buttonSwitch.addEventListener("click", switchCards);
 }
 
+function functionality8() {
+  let buttonSwitch = document.getElementsByClassName("btn")[0];
+  let cards = document.querySelectorAll(".col-md-4");
+  buttonSwitch.href = '#';
+
+  for (i = 0; i < cards.length; i++) {
+    cards[i].style.order = i
+  }
+  let inverseSwitchCards = function(event) {
+    event.preventDefault();
+    for (i = 0; i < cards.length; i++) {
+      if (cards[i].style.order == 0) {
+        cards[i].style.order = 5;
+      } else {
+        cards[i].style.order = parseInt(cards[i].style.order) - 1;
+      }
+    }
+  }
+  buttonSwitch.addEventListener('click', inverseSwitchCards);
+}
 // functionality1();
 // functionality1Bis();
 // functionality2();
@@ -114,4 +132,5 @@ function functionality7() {
 // functionality4();
 // functionality5();
 // functionality6();
-functionality7();
+// functionality7();
+functionality8();
