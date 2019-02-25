@@ -75,21 +75,43 @@ function functionality6() {
   for (let i = 0; i < card.length; i++){
     mousePass[i].addEventListener('mouseover', function(){
       if(cardText[i].style.display == 'none'){
-      cardText[i].style.display = 'block';
-      imgCard[i].style.width = '100%';
-    } else {
-      cardText[i].style.display = 'none';
-      imgCard[i].style.width = '20%'
+        cardText[i].style.display = 'block';
+        imgCard[i].style.width = '100%';
+      } else {
+        cardText[i].style.display = 'none';
+        imgCard[i].style.width = '20%'
 
-    }
+      }
     });
 
   }
 }
+
+function functionality7() {
+  let buttonSwitch = document.getElementsByClassName("btn")[1];
+  let cards = document.querySelectorAll(".col-md-4");
+
+  for (i = 0; i < cards.length; i++) {
+    cards[i].style.order = i
+  }
+  let switchCards = function() {
+    for (i = 0; i < cards.length; i++) {
+      if (cards[i].style.order == (cards.length - 1)) {
+        cards[i].style.order = 0;
+      } else {
+        cards[i].style.order = parseInt(cards[i].style.order) + 1;
+        console.log(switchCards);
+      }
+    }
+  }
+  buttonSwitch.addEventListener("click", switchCards);
+}
+
 // functionality1();
 // functionality1Bis();
 // functionality2();
 // functionality3();
 // functionality4();
 // functionality5();
-functionality6();
+// functionality6();
+functionality7();
