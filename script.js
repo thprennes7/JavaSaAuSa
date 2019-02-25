@@ -7,7 +7,7 @@ function functionality1() {
 }
 
 function functionality1Bis() {
-  let footer = document.querySelector('footer');
+  let footer = document.getElementsByTagName('footer')[0];
   let x = 0;
   let onClickFooterBis = function() {
       if ( onClickFooterBis) {
@@ -18,5 +18,15 @@ function functionality1Bis() {
   footer.addEventListener("click", onClickFooterBis);
 }
 
+function functionality2() {
+  let navBarClick = document.getElementById('navbarHeader');
+  let burger = document.getElementsByClassName('navbar-toggler')[0];
+  let onClickBurger = function() {
+
+    navBarClick.classList.toggle("collapse");
+}
+  burger.addEventListener('click', onClickBurger);
+}
 // functionality1();
 functionality1Bis();
+functionality2();
