@@ -125,12 +125,30 @@ function functionality8() {
   }
   buttonSwitch.addEventListener('click', inverseSwitchCards);
 }
-// functionality1();
-// functionality1Bis();
-// functionality2();
-// functionality3();
-// functionality4();
-// functionality5();
-// functionality6();
-// functionality7();
+
+function functionality9() {
+  let logo = document.getElementsByTagName("strong")[0];
+  let column = document.getElementsByTagName("header")[0];
+  let column2 = document.getElementsByTagName("main")[0];
+  let column3 = document.getElementsByTagName("footer")[0];
+
+
+  console.log(column);
+  let switchColumn = function() {
+    column.className = "col-4 offset-md-4";
+    column2.className = "col-4 offset-md-4";
+    column3.className = "col-4 offset-md-4";
+
+  }
+  logo.addEventListener('click', switchColumn);
+}
+functionality1();
+functionality1Bis();
+functionality2();
+functionality3();
+functionality4();
+functionality5();
+functionality6();
+functionality7();
 functionality8();
+functionality9();
